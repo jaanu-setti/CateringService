@@ -13,10 +13,15 @@ mongoose.connect('mongodb://localhost:27017/Cateringservice')
 .catch(err=>console.error('failed to connect to mongodb',err))
 
 const cors = require('cors');
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({origin: 'http://localhost:3000', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true  }));
 
 const recipe = require('./routes/recipe');
 app.use('/recipe',recipe)
+
+const user = require('./routes/user');
+app.use('/user' ,user)
 
 const path = require('path');
 app.use(express.static('public'))

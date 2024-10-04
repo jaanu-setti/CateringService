@@ -15,7 +15,6 @@ const recipes = [
    },{
     name : "bagara rice",
     type  : "maincourse",
-    specialtype : "south indian veg thali",
     price : 20,
     image :'/images/bagararice.jpg'
    },{
@@ -27,6 +26,7 @@ const recipes = [
    },{
     name : "bread sweet",
     type  : "sweets",
+    specialtype : "south indian nonveg thali",
     price : 10,
     image :'/images/breadsweet.jpg'
    },{
@@ -77,6 +77,7 @@ const recipes = [
    },{
     name : "chole bhature",
     type  : "tiffins",
+    specialtype : "tiffins",
     price : 30,
     image :'/images/cholebhature.jpg'
    },{
@@ -93,27 +94,28 @@ const recipes = [
     image :'/images/dalmakhani.jpg'
    },{
     name : "dosa",
-    type  : "maincourse",
+    type  : "tiffins",
+    specialtype  : "tiffins",
     price : 30,
     image :'/images/dosa.jpeg'
    },{
     name : "drumstick curry",
     type  : "maincourse",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 25,
     image :'/images/drumstickcurry.jpg'
    },{
     name : "dryfruit halwa",
     type  : "sweets",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 50,
     image :'/images/dryfruithalwa.jpg'
    },{
     name : "dryfruit icecream",
     type  : "desserts",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 60,
     image :'/images/dryfruiticecream.jpg'
@@ -126,31 +128,33 @@ const recipes = [
    },{
     name : "ginger lemonade",
     type  : "bewarages",
+    specialtype : "south indian nonveg thali",
     price : 15,
     image :'/images/gingerlemonade.jpg'
    },{
     name : "gobi 65",
     type  : "starters",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 15,
     image :'/images/gobi65.jpg'
    },{
     name : "gulab jamun",
     type  : "desserts",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 35,
     image :'/images/gulabjamun.jpg'
    },{
     name : "idly",
     type  : "tiffins",
+    specialtype  : "tiffins",
     price : 25,
     image :'/images/idly.jpeg'
    },{
     name : "jackfruit biryani",
     type  : "maincourse",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg thali",
     package : 'gold',
     price : 55,
     image :'/images/jackfruitbiryani.jpg'
@@ -162,7 +166,7 @@ const recipes = [
    },{
     name : "kobbaritamata pachadi",
     type  : "maincourse",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 8,
     image :'/images/kobbaritamata.jpg'
@@ -181,7 +185,7 @@ const recipes = [
    },{
     name : "mamidikaya pappu",
     type  : "maincourse",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 8,
     image :'/images/mamidikayipappu.jpg'
@@ -194,26 +198,27 @@ const recipes = [
    },{
     name : "mapotofu",
     type  : "maincourse",
-    specialtype : "chinese thali",
+    specialtype : "chinese special thali",
     price : 20,
     image :'/images/mapotofu.jpg'
    },
    {
     name : "momos",
     type  : "maincourse",
-    specialtype : "chinese thali",
+    specialtype : "chinese special thali",
     price : 10,
     image :'/images/momos.jpg'
    },{
     name : "mushroom samosa",
     type  : "maincourse",
-    specialtype : "south indian thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 15,
     image :'/images/mushroomsamosa.jpg'
    },{
     name : "mysore bhajji",
-    type  : "maincourse",
+    type  : "tiffins",
+    specialtype  : "tiffins",
     price : 30,
     image :'/images/mysore bhajji.jpeg'
    }, {
@@ -225,17 +230,16 @@ const recipes = [
    },{
     name : "papads",
     type  : "maincourse",
-    specialtype : "south indian veg thali",
+    specialtype : "common",
     package : 'gold',
     price : 5,
     image :'/images/papads.jpg'
    },{
     name : "papaya halwa",
-    type  : "maincourse",
-    specialtype : "south indian  thali",
+    type  : "sweets",
     package : 'gold',
     price : 25,
-    image :'/images/papads.jpg'
+    image :'/images/papayahalwa.jpg'
    },{
     name : "pineapple mango punch",
     type  : "bewarages",
@@ -256,7 +260,7 @@ const recipes = [
    },{
     name : "pudina rice",
     type  : "maincourse",
-    specialtype : "south indian  thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 35,
     image :'/images/pudinarice.jpg'
@@ -269,7 +273,7 @@ const recipes = [
    },{
     name : "raspberry mojito",
     type  : "bewarages",
-    specialtype : "south indian  thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 65,
     image :'/images/raspberrymojito.jpg'
@@ -281,7 +285,7 @@ const recipes = [
    },{
     name : "rumali roti",
     type  : "maincourse",
-    specialtype : "south indian nonveg thali",
+    specialtype : "north indian thali",
     price : 25,
     image :'/images/rumaliroti.jpg'
    },{
@@ -313,21 +317,25 @@ const recipes = [
    },{
     name : "tangyoun",
     type  : "sweets",
+    specialtype: "chinese special thali",
     price : 40,
     image :'/images/tangyoun.jpeg'
    },{
     name : "tomato pappu",
     type  : "maincourse",
+    specialtype : "south indian veg thali",
     price : 20,
     image :'/images/tomatopappu.jpg'
    },{
     name : "upma",
     type  : "tiffins",
+    specialtype  : "tiffins",
     price : 30,
     image :'/images/upma.jpeg'
    },{
     name : "vada",
     type  : "tiffins",
+    specialtype  : "tiffins",
     price : 30,
     image :'/images/vada.jpeg'
    },{
@@ -343,11 +351,13 @@ const recipes = [
    },{
     name : "vennela icecream",
     type  : "desserts",
+    specialtype : "south indian nonveg thali",
     price : 20,
     image :'/images/vennelaicecream.jpg'
    },{
     name : "white rice",
-    type  : "rice",
+    type  : "maincourse",
+    specialtype  : "common",
     price : 30,
     image :'/images/whiterice.jpg'
    },{
@@ -392,7 +402,7 @@ const recipes = [
    },{
     name : "mushroom curry",
     type  : "maincourse",
-    specialtype : "south indian  thali",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 35,
     image :'/images/mushroom curry.jpeg'
@@ -408,23 +418,23 @@ const recipes = [
     image :'/images/mushroomchilli.jpg'
    },{
     name : "mutton biryani",
-    type  : "maincoarse",
+    type  : "maincourse",
     price : 250,
     image :'/images/muttonbiryani.jpg'
    },{
     name : "mutton curry",
-    type  : "maincoarse",
+    type  : "maincourse",
     price : 150,
     image :'/images/muttoncurry.jpg'
    },{
     name : "paneer curry",
-    type  : "maincoarse",
+    type  : "maincourse",
     price : 60,
     image :'/images/paneercurry.jpeg'
    },{
     name : "paneer biryani",
-    type  : "maincoarse",
-    specialtype : "south indian  thali",
+    type  : "maincourse",
+    specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 100,
     image :'/images/paneerbiryani.jpeg'
