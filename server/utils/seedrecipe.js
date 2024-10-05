@@ -363,7 +363,6 @@ const recipes = [
    },{
     name : "brinjal curry",
     type  : "maincourse",
-    specialtype : "south indian veg thali",
     price : 25,
     image :'/images/brinjalcurry.jpeg'
    },{
@@ -458,7 +457,6 @@ const recipes = [
    },{
     name : "sambar",
     type  : "maincourse",
-    specialtype : "south indian veg thali",
     package :"gold",
     price : 20,
     image :'/images/sambar.jpeg'
