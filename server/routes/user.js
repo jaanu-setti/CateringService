@@ -39,4 +39,23 @@ route.post('/signup' , async(req,res)=>{
     return res.status(500).json({message : err.message})
   }
 })
+
+route.post('/login',async(req,res)=>{
+ try{
+  const {email , password} = req.body;
+  const logindata = await User.findOne({email});
+  if(!logindata){
+    res.status(401).json({message : 'no user is registered with the given email'});
+    return;
+  }
+  const passwordmatch = await bcrypt.compare(password,logindata.password);
+  if(!passwordmatch){
+    return res.status(400).json({message : 'incorrect password'})
+  }
+  const token = await jwt.sign({name : logindata.name , email : logindata.email} , 'secret_key' , {expiresIn : '1hr'});
+  return res.json({token});
+ }catch(err){
+  res.status(500).json({message :err.message})
+ }
+})
 module.exports = route;
