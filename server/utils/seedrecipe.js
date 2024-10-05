@@ -14,7 +14,7 @@ const recipes = [
     image :'/images/alooparatha.jpg'
    },{
     name : "bagara rice",
-    type  : "maincourse",
+    type  : "biryanis",
     price : 20,
     image :'/images/bagararice.jpg'
    },{
@@ -48,7 +48,7 @@ const recipes = [
     image :'/images/carrothalwa.jpg'
    },{
     name : "chicken friedrice",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "chinese special thali",
     price : 50,
     image :'/images/chickenfriedrice.jpg'
@@ -59,13 +59,13 @@ const recipes = [
     image :'/images/chickenfry.jpg'
    },{
     name : "chicken noodles",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "chinese special thali",
     price : 50,
     image :'/images/chickennoodles.jpg'
    },{
     name : "chicken springroll",
-    type  : "maincourse",
+    type  : "starters",
     specialtype : "south indian nonveg thali",
     price : 20,
     image :'/images/chickensprinroll.jpg'
@@ -153,7 +153,7 @@ const recipes = [
     image :'/images/idly.jpeg'
    },{
     name : "jackfruit biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "south indian veg thali",
     package : 'gold',
     price : 55,
@@ -204,13 +204,13 @@ const recipes = [
    },
    {
     name : "momos",
-    type  : "maincourse",
+    type  : "starters",
     specialtype : "chinese special thali",
     price : 10,
     image :'/images/momos.jpg'
    },{
     name : "mushroom samosa",
-    type  : "maincourse",
+    type  : "starters",
     specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 15,
@@ -223,7 +223,7 @@ const recipes = [
     image :'/images/mysore bhajji.jpeg'
    }, {
     name : "north indian biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "north indian thali",
     price : 60,
     image :'/images/northindianbiryani.jpg'
@@ -259,7 +259,7 @@ const recipes = [
     image :'/images/potato65.jpg'
    },{
     name : "pudina rice",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 35,
@@ -284,13 +284,13 @@ const recipes = [
     image :'/images/roohafzamilk.jpg'
    },{
     name : "rumali roti",
-    type  : "maincourse",
+    type  : "starters",
     specialtype : "north indian thali",
     price : 25,
     image :'/images/rumaliroti.jpg'
    },{
     name : "singori",
-    type  : "maincourse",
+    type  : "starters",
     specialtype : "north indian thali",
     price : 35,
     image :'/images/singori.jpg'
@@ -368,7 +368,7 @@ const recipes = [
     image :'/images/brinjalcurry.jpeg'
    },{
     name : "chicken biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "south indian nonveg thali",
     price : 100,
     image :'/images/chickenbiryani.jpg'
@@ -408,7 +408,7 @@ const recipes = [
     image :'/images/mushroom curry.jpeg'
    },{
     name : "mushroom biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     price : 50,
     image :'/images/mushroombiryani.jpeg'
    },{
@@ -418,7 +418,7 @@ const recipes = [
     image :'/images/mushroomchilli.jpg'
    },{
     name : "mutton biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     price : 250,
     image :'/images/muttonbiryani.jpg'
    },{
@@ -433,7 +433,7 @@ const recipes = [
     image :'/images/paneercurry.jpeg'
    },{
     name : "paneer biryani",
-    type  : "maincourse",
+    type  : "biryanis",
     specialtype : "south indian veg gold thali",
     package : 'gold',
     price : 100,
@@ -462,7 +462,7 @@ const recipes = [
     package :"gold",
     price : 20,
     image :'/images/sambar.jpeg'
-   },
+   }
 
 ]
 const Recipelist =async()=>{
