@@ -23,6 +23,9 @@ app.use('/recipe',recipe)
 const user = require('./routes/user');
 app.use('/user' ,user)
 
+const order = require('./routes/order');
+app.use('/' , order);
+
 const path = require('path');
 app.use(express.static('public'))
 const port = 5001;
