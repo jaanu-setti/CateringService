@@ -1,5 +1,5 @@
 const express = require('express');
-const route = express.Router;
+const route = express.Router();
 const Order = require('../models/order');
 route.post('/order' , async(req,res)=>{
    const {itemname , type , totalprice , address , event , phone , customername} = req.body
