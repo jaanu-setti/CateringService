@@ -1,22 +1,25 @@
 const express = require('express');
 const route = express.Router();
 const Order = require('../models/order');
-route.post('/order' , async(req,res)=>{
-   const {itemname , type , totalprice , address , event , phone , customername} = req.body
+route.post('/placeorder' , async(req,res)=>{
+   const { totalprice , address , event , phone , name ,recipes} = req.body
    try{
-    if(!itemname || !type || !totalprice || !address || !event || !phone || !customername){
-        res.status(401).json({message : 'all fields are required'})
+    console.log(req.body)
+    if( !totalprice || !address || !event || !phone || !name || !recipes){
+        res.status(400).json({message : 'all fields are required'})
         return
     }
     const orderplaced = await Order.create({
-        itemname ,
-        type,
-        address,
         totalprice,
+        address,
         event,
         phone,
-        customername
-    })
+        name,
+        recipes: recipes.map(recipe => ({
+            itemname: recipe.itemname,
+            itemtype: recipe.itemtype
+        }))
+    });
     res.status(201).json({message : "order has been placed successfully" , data : orderplaced})
     return;
    }catch(err){

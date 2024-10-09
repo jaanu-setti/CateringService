@@ -24,7 +24,7 @@ const user = require('./routes/user');
 app.use('/user' ,user)
 
 const order = require('./routes/order');
-app.use('/' , order);
+app.use('/order' , order);
 
 const path = require('path');
 app.use(express.static('public'))
