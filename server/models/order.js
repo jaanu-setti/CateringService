@@ -9,6 +9,8 @@ const orderSchema = mongoose.Schema({
     event : {type : String},
     phone : {type : String},
     name  : {type : String},
+    plates : {type : Number},
+    date : {type : String},
     recipes : [recipeSchema]
 })
 const order = mongoose.model('orders' , orderSchema);
