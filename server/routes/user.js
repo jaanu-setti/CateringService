@@ -4,6 +4,7 @@ const User = require('../models/user')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const validate = require('validator');
+
 route.post('/signup' , async(req,res)=>{
   try{
     const {name , email , phone , state , district , password , confirmpassword}=req.body;
@@ -39,7 +40,7 @@ route.post('/signup' , async(req,res)=>{
     return res.status(500).json({message : err.message})
   }
 })
-
+const admin = {name : 'jahnavi' , email : 'jaanuadmin@gmail.com'}
 route.post('/login',async(req,res)=>{
  try{
   const {email , password} = req.body;
@@ -53,7 +54,16 @@ route.post('/login',async(req,res)=>{
     return res.status(400).json({message : 'incorrect password'})
   }
   const token = await jwt.sign({name : logindata.name , email : logindata.email} , 'secret_key' , {expiresIn : '1hr'});
-  return res.json({token});
+ 
+  if(email===admin.email){
+    res.json({ message: 'Welcome Admin', role: 'admin' });
+    console.log('admin logged')
+  }
+  else{
+    res.json({ message: 'Welcome User', role: 'user' });
+    console.log('user logged')
+  }
+ 
  }catch(err){
   res.status(500).json({message :err.message})
  }
